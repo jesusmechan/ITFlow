@@ -323,6 +323,16 @@ body.dark-mode .hero h1 .highlight {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.hero-visual img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    object-fit: contain;
 }
 
 .mockup-container {
