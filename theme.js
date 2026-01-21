@@ -86,4 +86,45 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Verificar posición inicial
     toggleScrollToTop();
+    
+    // Funcionalidad del video
+    initVideoPlayer();
 });
+
+// Funcionalidad del reproductor de video
+function initVideoPlayer() {
+    const video = document.getElementById('demo-video');
+    const playButton = document.getElementById('play-button');
+    const videoContainer = document.querySelector('.video-container');
+    
+    if (!video || !playButton || !videoContainer) {
+        return;
+    }
+    
+    // Reproducir video cuando se hace clic en el botón
+    playButton.addEventListener('click', function() {
+        video.play();
+        videoContainer.classList.add('playing');
+        playButton.classList.add('hidden');
+    });
+    
+    // Mostrar botón cuando el video se pausa
+    video.addEventListener('pause', function() {
+        if (video.currentTime > 0 && !video.ended) {
+            videoContainer.classList.remove('playing');
+            playButton.classList.remove('hidden');
+        }
+    });
+    
+    // Ocultar botón cuando el video termina
+    video.addEventListener('ended', function() {
+        videoContainer.classList.remove('playing');
+        playButton.classList.remove('hidden');
+    });
+    
+    // Ocultar botón cuando el video se está reproduciendo
+    video.addEventListener('play', function() {
+        videoContainer.classList.add('playing');
+        playButton.classList.add('hidden');
+    });
+}
