@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ITFlow - Planes de precios sencillos para equipos de todos los tamaños. Desde startups hasta empresas globales.">
+    <meta name="keywords" content="precios, planes, pricing, help desk, tickets, soporte técnico">
+    <meta name="author" content="ITFlow">
+    <title>Precios - ITFlow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: inherit;">
+                    <div class="logo-icon" aria-hidden="true">IT</div>
+                    <h1>ITFlow</h1>
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html#capacidades">Características</a></li>
+                    <li><a href="precios.html" class="active">Precios</a></li>
+                    <li><a href="index.html#recursos">Recursos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="btn-login">Ingresar</button>
+                    <button class="btn-trial">Prueba Gratis</button>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de Título Principal -->
+        <section class="pricing-hero">
+            <div class="container">
+                <div class="pricing-hero-content">
+                    <h1>Planes sencillos para equipos de <span class="highlight">todos los tamaños</span></h1>
+                    <p class="pricing-subtitle">Desde startups en crecimiento hasta empresas globales. Escala tu soporte al cliente sin complicaciones técnicas ni costos ocultos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Planes de Precios -->
+        <section class="pricing-plans-section">
+            <div class="container">
+                <!-- Toggle Mensual/Anual -->
+                <div class="pricing-toggle-container">
+                    <div class="pricing-toggle">
+                        <button class="toggle-btn" id="toggle-monthly">Mensual</button>
+                        <button class="toggle-btn active" id="toggle-annual">Anual (-20%)</button>
+                    </div>
+                </div>
+
+                <!-- Cards de Planes -->
+                <div class="pricing-cards">
+                    <!-- Plan Starter -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <h3>Starter</h3>
+                            <p class="plan-description">Ideal para freelancers y equipos individuales.</p>
+                        </div>
+                        <div class="plan-price">
+                            <span class="price-amount" data-monthly="$0" data-annual="$0">$0</span>
+                            <span class="price-period">/mes</span>
+                        </div>
+                        <button class="plan-button plan-button-secondary">Empezar Gratis</button>
+                        <div class="plan-features">
+                            <p class="features-label">INCLUYE:</p>
+                            <ul class="features-list">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>1 Agente de soporte</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>2GB de almacenamiento</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Soporte por email</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Plan Profesional -->
+                    <div class="pricing-card pricing-card-featured">
+                        <div class="plan-badge">MÁS RECOMENDADO</div>
+                        <div class="plan-header">
+                            <h3>Profesional</h3>
+                            <p class="plan-description">Perfecto para equipos en rápido crecimiento.</p>
+                        </div>
+                        <div class="plan-price">
+                            <span class="price-amount" data-monthly="$49" data-annual="$39">$49</span>
+                            <span class="price-period">/mes</span>
+                        </div>
+                        <button class="plan-button plan-button-primary">Comenzar Ahora</button>
+                        <div class="plan-features">
+                            <p class="features-label">TODO LO DE STARTER, MÁS:</p>
+                            <ul class="features-list">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Hasta 10 Agentes</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>50GB Almacenamiento</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Chat en Vivo 24/7</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Plan Enterprise -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <h3>Enterprise</h3>
+                            <p class="plan-description">Control y seguridad avanzada para corporaciones.</p>
+                        </div>
+                        <div class="plan-price">
+                            <span class="price-amount" data-monthly="$199" data-annual="$159">$199</span>
+                            <span class="price-period">/mes</span>
+                        </div>
+                        <button class="plan-button plan-button-outline">Contactar Ventas</button>
+                        <div class="plan-features">
+                            <p class="features-label">TODO LO DE PROFESIONAL, MÁS:</p>
+                            <ul class="features-list">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Agentes Ilimitados</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Almacenamiento Ilimitado</span>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>SLA Garantizado</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla Comparativa de Funciones -->
+        <section class="comparison-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tabla Comparativa de Funciones</h2>
+                    <p class="section-subtitle">Explora cada detalle de nuestras herramientas y elige el plan que mejor se adapte a tus necesidades operativas.</p>
+                </div>
+                <div class="comparison-table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>CARACTERÍSTICAS</th>
+                                <th>Starter</th>
+                                <th class="highlight-column">Profesional</th>
+                                <th>Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="category-row">
+                                <td colspan="4"><strong>GESTIÓN DE TICKETS</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Agentes de soporte</td>
+                                <td>1</td>
+                                <td class="highlight-column">Hasta 10</td>
+                                <td>Ilimitados</td>
+                            </tr>
+                            <tr>
+                                <td>Buzón compartido</td>
+                                <td>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                                <td class="highlight-column">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                                <td>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Reglas de automatización</td>
+                                <td>—</td>
+                                <td class="highlight-column">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                                <td>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4"><strong>ANALÍTICA Y SOPORTE</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Reportes básicos</td>
+                                <td>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                                <td class="highlight-column">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                                <td>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Reportes avanzados y Dashboards</td>
+                                <td>—</td>
+                                <td class="highlight-column">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                                <td>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Soporte 24/7</td>
+                                <td>—</td>
+                                <td class="highlight-column">Chat en vivo</td>
+                                <td>Prioritario & Telefónico</td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4"><strong>INTEGRACIONES Y API</strong></td>
+                            </tr>
+                            <tr>
+                                <td>API de acceso</td>
+                                <td>—</td>
+                                <td class="highlight-column">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                                <td>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Integración con Slack & Teams</td>
+                                <td>—</td>
+                                <td class="highlight-column">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                                <td>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Single Sign-On (SSO)</td>
+                                <td>—</td>
+                                <td class="highlight-column">—</td>
+                                <td>
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Preguntas Frecuentes -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Preguntas Frecuentes</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3>¿Puedo cambiar de plan después?</h3>
+                        <p>Sí, puedes subir o bajar de nivel en cualquier momento desde tu panel de configuración. Los cambios se prorratean inmediatamente.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Ofrecen descuentos para ONGs?</h3>
+                        <p>¡Claro que sí! Ofrecemos un descuento del 50% para organizaciones sin fines de lucro y proyectos educativos verificados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: inherit;">
+                            <div class="logo-icon" aria-hidden="true">IT</div>
+                            <h3>ITFlow</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="#">Términos</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Privacidad</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Seguridad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> ITFlow Inc. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botón para volver al inicio -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Volver al inicio">
+        <span>↑</span>
+    </button>
+    
+    <script src="theme.js"></script>
+    <script>
+        // Toggle de precios mensual/anual
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleMonthly = document.getElementById('toggle-monthly');
+            const toggleAnnual = document.getElementById('toggle-annual');
+            const priceAmounts = document.querySelectorAll('.price-amount');
+            
+            toggleMonthly.addEventListener('click', function() {
+                toggleMonthly.classList.add('active');
+                toggleAnnual.classList.remove('active');
+                priceAmounts.forEach(price => {
+                    price.textContent = price.getAttribute('data-monthly');
+                });
+            });
+            
+            toggleAnnual.addEventListener('click', function() {
+                toggleAnnual.classList.add('active');
+                toggleMonthly.classList.remove('active');
+                priceAmounts.forEach(price => {
+                    price.textContent = price.getAttribute('data-annual');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
